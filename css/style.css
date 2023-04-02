@@ -1,0 +1,324 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+:root{
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: hsl(233, 8%, 79%);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+
+}
+.container{
+  
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+
+/* start grid system */
+
+@media (min-width:576px) { /*small devices*/
+    .container{
+        max-width: 540px;
+    }
+    
+}
+@media (min-width:768px) { /*medium devices*/
+    .container{
+        max-width: 720px;
+    }
+    
+}
+@media (min-width:992px) { /*pc devices*/
+    .container{
+        max-width: 960px;
+    }
+    
+}
+@media (min-width:1200px) { /*large devices*/
+    .container{
+        max-width: 1140px;
+    }
+    
+}
+@media (min-width:1500px) { /*large devices*/
+    .container{
+        max-width: 1440px;
+    }
+    
+}
+/* end grid system */
+
+
+
+/* start the header */
+header {
+    padding: 15px;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+header .container .links a{
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 5px;
+    color: var(--Dark-Grayish-blue);
+    transition: .3s;
+}
+header .container .links img{
+    display: none;
+}
+header .container .menu-button{
+    display: none;
+}
+header .container .links a:hover{
+    color: var(--Soft-red);
+}
+@media (max-width:575px) {
+    header .container .links.active img{
+        display: block;
+        
+    
+        cursor: pointer;
+        position: relative;
+        left: 120px;
+        top: 20px;
+       
+    }
+    header .container .links {
+        display: none;
+        
+        right: -200px;
+    }
+    
+    header .container .links.active a{
+        display: block;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    header .container .links.active {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 0;
+        background-color: white;
+        height: 100%;
+        width: 200px;
+        padding-left: 20px;
+       
+       
+    }
+    header .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+    header .container .menu-button{
+        display: block;
+        cursor: pointer;
+    }
+}
+/* end the header */
+
+
+
+/* start body */
+main{
+    padding: 15px;
+}
+main .container{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+main .container .left img{
+    width: 97%;
+}
+main .container .right{
+    background-color: var(--Very-dark-blue);
+    padding-right: 10px;
+    padding-left: 10px;
+
+}
+main .container .right h1{
+    color: var(--Soft-orange);
+}
+main .container .right .text-content h2{
+    color: var(--Off-white);
+    margin-bottom: 10px;
+    font-size: 20px; 
+    transition: .3s;
+    cursor: pointer;
+}
+main .container .right .text-content h2:hover{
+    color: var(--Soft-orange);
+}
+main .container .right .text-content p{
+    color: var(--Grayish-blue);
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--Off-white);
+    font-size: 15px;
+}
+
+main .container .right .text-content .last{
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+main .container .left{
+    flex:3;
+}
+main .container .right{
+    flex:1;
+   
+  
+}
+main .container .left .text {
+    display: flex;
+    /* align-items: center */
+    margin-top: 40px;
+    justify-content: space-between;
+    padding-right: 45px;
+    /* padding-left: 10px; */
+}
+main .container .left .text h1{
+    color: var(--Very-dark-blue);
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+    width: 9ch;
+}
+main .container .left .text p{
+    margin: 0;
+    padding: 0;
+    margin-bottom: 60px;
+    color: var(--Dark-Grayish-blue);
+    font-size: 15px;
+    width: 36ch;
+}
+main .container .left .text button{
+   
+    width: 40%;
+    padding-top: 10px;
+    padding-bottom:10px ;
+    background-color: var(--Soft-red);
+    color: var(--Off-white);
+    border: none;
+    font-size: 16px;
+    letter-spacing: 2px;
+    transition: .3s;
+    cursor: pointer;
+}
+main .container .left .text button:hover{
+    background-color: black;
+    color: var(--Off-white);
+
+}
+
+/* end body */
+
+
+/* start boxes  */
+
+.boxes {
+    padding: 10px;
+}
+
+.boxes .container{
+    display: flex;
+    justify-content: space-between;
+}
+.boxes .container .box {
+    width:calc(100% / 3);
+    display: flex;
+    padding-bottom: 50px;
+    gap: 20px;
+    align-items: top;
+}
+.boxes .container .box img{
+    width: 40%;
+}
+.boxes .container .box h1{
+    color: var(--Grayish-blue);
+    padding-top: 0;
+    margin-top: 0;
+    
+}
+.boxes .container .box h2{
+color: var(--Very-dark-blue);
+cursor: pointer;
+transition: .3s;
+margin-bottom: 20px;
+
+font-size: 16px;
+}
+.boxes .container .box h2:hover{
+    color: var(--Soft-red);
+}
+.boxes .container .box p{
+    color: var(--Dark-Grayish-blue);
+    font-size: 15px;
+}
+
+/* end boxes  */
+
+
+@media (min-width:200px) and (max-width:950px) { /*small devices*/
+    .container{
+        max-width: 540px;
+    }
+    main .container{
+        flex-direction: column;
+    }
+    main .container .left .text{
+        flex-direction: column;
+    }
+    main .container .left .text button{
+        margin-bottom: 20px;
+    }
+    main .container .right{
+        padding-bottom: 30px;
+    }
+    .boxes .container{
+        flex-direction: column;
+    }
+    .boxes .container .box{
+        width: 100%;
+    }
+}
+
+
+@media (min-width:660px) and (max-width:950px) {
+    .container{
+        max-width: 620px;
+    }
+    main .container .left .text{
+        padding-right: 0;
+        align-items: center;
+        text-align: center;
+    }
+    main .container .right{
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .box {
+        text-align: center;
+        align-items: center;
+    }
+ 
+}
